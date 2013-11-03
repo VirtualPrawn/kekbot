@@ -1,9 +1,10 @@
 var kekbot = {};
 kekbot.enabled = false;
+kekbot.name = "kekbot";
 kekbot.enable = function(){
 	if(!kekbot.enabled){
 		API.on(API.CHAT, kekbot.handleCommand);
-		kekbot.say("[bot] Enabled.");
+		kekbot.say("["+kekbot.name+"] Enabled.");
 		kekbot.enabled = true;	
 	}
 	else{
@@ -16,7 +17,7 @@ kekbot.say = function(msg){
 kekbot.disable = function(){
 	if(kekbot.enabled){
 		API.off(API.CHAT, kekbot.handleCommand);
-		kekbot.say("[bot] Disabled.");
+		kekbot.say("["+kekbot.name+"] Disabled.");
 		kekbot.enabled = false;	
 	}
 	else{
