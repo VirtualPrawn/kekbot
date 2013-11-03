@@ -27,3 +27,5 @@ Commands
  * addmod (@person) - Add a mod to the Kekbot list.
  * removemod (@person) - Remove a mod from the Kekbot list.
  * loadmods - Load the mod list after a code hotswap.
+ * modtojson - Convert the kekbot.mods object to JSON.
+ * jsontomod - Load the JSON into the kekbot.mods object.

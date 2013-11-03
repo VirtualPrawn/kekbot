@@ -81,6 +81,15 @@ kekbot.handleCommand = function(data){
 			kekbot.enabled&&
 			kekbot.test.ifMod(data.from, true)&&
 			kekbot.handle.removemod(data);
+			break;
+		case "%modtojson":
+			kekbot.test.ifMod(data.from, true)&&
+			kekbot.handle.modtojson(data);
+			break;
+		case "%jsontomod":
+			kekbot.test.ifMod(data.from, true)&&
+			kekbot.handle.jsontomod(data);
+			break;
 		default:
 			break;
 	}
@@ -190,6 +199,20 @@ kekbot.handle.removemod = function(data){
 	else{
 		delete kekbot.mods[data.message[1]];
 		kekbot.say("@"+data.from+": Removed "+data.message[1]+" from the modlist.");
+	}
+}
+kekbot.handle.modtojson = function(data){
+	kekbot.say(JSON.stringify(kekbot.mods));
+}
+kekbot.handle.jsontomod = function(data){
+	console.log($("<div/>").html(data.message[1]).text());
+	try{
+		kekbot.mods = JSON.parse($("<div/>").html(data.message[1]).text());
+		kekbot.say("Success!");
+	}
+	catch(e){
+		kekbot.say("Error loading modlist from JSON.");
+		kekbot.say(e);
 	}
 }
 API.on(API.CHAT, kekbot.handleCommand);
