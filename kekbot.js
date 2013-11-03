@@ -8,6 +8,21 @@ kekbot.name = "kekbot";
 kekbot.mods = {};
 kekbot.mods["KekBot"] = "admin";
 
+kekbot.fortunes = [
+	"Godly luck",
+	"Good luck",
+	"Bad luck",
+	"Future hazy, try again",
+	"You will never fall in love",
+	"ｷﾀ(ﾟ∀ﾟ) !!!!",
+	"You will meet a dark handsome stranger",
+	"doge sais wow bad luck",
+	"no keks 4 u",
+	"Very bad luck",
+	"super duper trooper luck",
+	"Good news will come to you by mail"	
+];
+
 kekbot.handleCommand = function(data){
 	if (data.type != "message"){
 		return false;
@@ -50,6 +65,10 @@ kekbot.handleCommand = function(data){
 		case "%downboats":
 			kekbot.test.ifMod(data.from)&&
 			kekbot.handle.downboats(data);
+			break;
+		case "%fortune":
+			kekbot.enabled&&
+			kekbot.handle.fortune(data);
 			break;
 		default:
 			break;
@@ -142,5 +161,9 @@ kekbot.handle.loadmods = function(data){
 		kekbot.say("["+kekbot.name+"]: No mods to load!");
 	}
 }
+kekbot.handle.fortune = function(data){
+	kekbot.say("Fortune: "+kekbot.fortunes[Math.floor(Math.random()*kekbot.fortunes.length)]+" @"+data.from);
+}
+
 API.on(API.CHAT, kekbot.handleCommand);
 kekbot.say("["+kekbot.name+"]: UPDATED.");
