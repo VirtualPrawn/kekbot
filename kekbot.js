@@ -9,18 +9,24 @@ kekbot.mods = {};
 kekbot.mods["KekBot"] = "admin";
 
 kekbot.fortunes = [
-	"Godly luck",
-	"Good luck",
-	"Bad luck",
-	"Future hazy, try again",
-	"You will never fall in love",
+	"Godly Luck",
+	"Good Luck",
+	"Bad Luck",
+	"Future Hazy, Try Again",
+	"You Will Never Fall In Love",
 	"ｷﾀ(ﾟ∀ﾟ) !!!!",
-	"You will meet a dark handsome stranger",
-	"doge sais wow bad luck",
-	"no keks 4 u",
-	"Very bad luck",
-	"super duper trooper luck",
-	"Good news will come to you by mail"	
+	"You Will Meet A Dark Handsome Stranger",
+	"Doge Sais 'wow bad luck'",
+	"No Keks 4 U",
+	"Very Bad Luck",
+	"Super Duper Trooper Luck",
+	"Good News Will Come To You By Mail",
+	"Doge Blesses You",
+	"Froge Blesses You",
+	"You Will Get Dubs",
+	"Wow Such Luck",
+	"Don't Bet On It",
+	"Ebin Luck"
 ];
 
 kekbot.handleCommand = function(data){
@@ -162,7 +168,7 @@ kekbot.handle.loadmods = function(data){
 	}
 }
 kekbot.handle.fortune = function(data){
-	kekbot.say("Fortune: "+kekbot.fortunes[Math.floor(Math.random()*kekbot.fortunes.length)]+" @"+data.from);
+	kekbot.say(kekbot.fortunes[Math.floor(Math.random()*kekbot.fortunes.length)]+" @"+data.from);
 }
 
 API.on(API.CHAT, kekbot.handleCommand);
