@@ -1,5 +1,9 @@
-try{API.off(API.CHAT, kekbot.handleCommand);}catch(e){}
+try{
+	API.off(API.CHAT, kekbot.handleCommand);
+	kekbotmods = kekbot.mods;
+}catch(e){}
 var kekbot = {};
+var kekbotmods = null;
 
 kekbot.enabled = false;
 kekbot.name = "kekbot";
@@ -17,25 +21,34 @@ kekbot.handleCommand = function(data){
 	data.message = [msg0, msgsplit.join(" ")];
 	switch(data.message[0]){
 		case "%enable":
-			kekbot.test.ifMod(data, kekbot.handle.enable, true);
+			kekbot.test.ifMod(data.from, true)&&
+			kekbot.handle.enable(data);
 			break;
 		case "%disable":
-			kekbot.test.ifMod(data, kekbot.handle.disable, true);
+			kekbot.test.ifMod(data.from, true)&&
+			kekbot.handle.disable(data);
 			break;
 		case "%roll":
-			kekbot.test.ifEnabled(data, kekbot.handle.roll);
+			kekbot.enabled&&
+			kekbot.handle.roll(data);
 			break;
 		case "%addmod":
-			kekbot.test.ifEnabled(data, function(data){kekbot.test.ifMod(data, kekbot.handle.addmod, true)});
+			kekbot.enabled&&
+			kekbot.test.ifMod(data.from, true)&&
+			kekbot.handle.addmod(data);
 			break;
 		case "%modtest":
-			kekbot.test.ifEnabled(data, kekbot.handle.modtest);
+			kekbot.enabled&&
+			kekbot.handle.modtest(data);
 			break;
 		case "%modlist":
-			kekbot.test.ifMod(data, kekbot.handle.modlist);
+			kekbot.enabled&&
+			kekbot.test.ifMod(data.from)&&
+			kekbot.handle.modlist(data);
 			break;
 		case "%downboats":
-			kekbot.test.ifMod(data, kekbot.handle.downboats);
+			kekbot.test.ifMod(data.from)&&
+			kekbot.handle.downboats(data);
 			break;
 		default:
 			break;
@@ -49,24 +62,18 @@ kekbot.say = function(msg){
 }
 
 kekbot.test = {};
-kekbot.test.ifEnabled = function(data, func){
-	if (kekbot.enabled){
-		func(data);
+kekbot.test.ifMod = function(who, admin){
+	if (admin && kekbot.mods[who] == "admin"){
+			return true;
 	}
-}
-kekbot.test.ifMod = function(data, func, admin){
-	if (admin){
-		if (kekbot.mods[data.from] && kekbot.mods[data.from] == "admin"){
-			func(data);
-		}
+	else if(!admin && kekbot.mods[who]){
+			return true;
 	}
 	else{
-		if (kekbot.mods[data.from]){
-			func(data);
-		}
+		return false;	
 	}
+	
 }
-
 
 kekbot.handle = {};
 kekbot.handle.enable = function(){
