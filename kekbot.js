@@ -121,7 +121,7 @@ kekbot.handle.disable = function(){
 	}
 }
 kekbot.handle.roll = function(data){
-	kekbot.say("Roll: "+Math.floor(Math.random()*999999)+" @"+data.from);
+	kekbot.say("Roll: "+Math.floor(Math.random()*1000000)+" @"+data.from);
 }
 kekbot.handle.addmod = function(data){
 	if (data.message[1][0] != "@"){
