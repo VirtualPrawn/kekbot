@@ -1,9 +1,6 @@
-try{
-	API.off(API.CHAT, kekbot.handleCommand);
-	kekbotmods = kekbot.mods;
-}catch(e){}
+try{API.off(API.CHAT, kekbot.handleCommand);}catch(e){}
+try{kekbotmods = JSON.parse(JSON.stringify(kekbot.mods));}catch(e){}
 var kekbot = {};
-var kekbotmods = null;
 
 kekbot.enabled = false;
 kekbot.name = "kekbot";
@@ -20,6 +17,10 @@ kekbot.handleCommand = function(data){
 	msgsplit.shift();
 	data.message = [msg0, msgsplit.join(" ")];
 	switch(data.message[0]){
+		case "%loadmods":
+			kekbot.test.ifMod(data.from, true)&&
+			kekbot.handle.loadmods(data);
+			break;
 		case "%enable":
 			kekbot.test.ifMod(data.from, true)&&
 			kekbot.handle.enable(data);
@@ -130,6 +131,16 @@ kekbot.handle.downboats = function(data){
 		}
 	}
 	kekbot.say("!===END LIST===!");
+}
+kekbot.handle.loadmods = function(data){
+	if(kekbotmods){
+		kekbot.mods = kekbotmods;
+		kekbotmods = null;
+		kekbot.say("["+kekbot.name+"]: Loaded mods.");
+	}
+	else{
+		kekbot.say("["+kekbot.name+"]: No mods to load!");
+	}
 }
 API.on(API.CHAT, kekbot.handleCommand);
 kekbot.say("["+kekbot.name+"]: UPDATED.");
