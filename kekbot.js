@@ -40,7 +40,9 @@ kekbot.handleCommand = function(data){
 }
 
 kekbot.say = function(msg){
+	var lastmsg = $("#chat-input-field").val();
 	$("#chat-input-field").val(msg).trigger($.Event("keydown",{keyCode: 13}));
+	$("#chat-input-field").val(lastmsg);
 }
 
 kekbot.test = {};
