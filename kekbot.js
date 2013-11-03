@@ -29,10 +29,13 @@ kekbot.handleCommand = function(data){
 			kekbot.test.ifEnabled(data, function(data){kekbot.test.ifMod(data, kekbot.handle.addmod, true)});
 			break;
 		case "%modtest":
-			kekbot.test.ifMod(data, kekbot.handle.modtest);
+			kekbot.test.ifEnabled(data, kekbot.handle.modtest);
 			break;
 		case "%modlist":
 			kekbot.test.ifMod(data, kekbot.handle.modlist);
+			break;
+		case "%downboats":
+			kekbot.test.ifMod(data, kekbot.handle.downboats);
 			break;
 		default:
 			break;
@@ -61,9 +64,6 @@ kekbot.test.ifMod = function(data, func, admin){
 		if (kekbot.mods[data.from]){
 			func(data);
 		}
-		else{
-			kekbot.say("You're not privileged! @"+data.from);
-		}	
 	}
 }
 
@@ -100,7 +100,12 @@ kekbot.handle.addmod = function(data){
 	kekbot.say("@"+data.from+": Added "+data.message[1]+" to the modlist.");
 }
 kekbot.handle.modtest = function(data){
-	kekbot.say("@"+data.from+": You are privileged!");
+	if (kekbot.mods[data.from]){
+		kekbot.say("@"+data.from+": You are privileged!");
+	}
+	else{
+		kekbot.say("@"+data.from+": You're not privileged!");
+	}
 }
 kekbot.handle.modlist = function(data){
 	kekbot.say("!==KEKBOT MODLIST==!");
@@ -108,6 +113,16 @@ kekbot.handle.modlist = function(data){
 		kekbot.say(mod);
 	}
 	kekbot.say("!==END MODLIST==!");
+}
+kekbot.handle.downboats = function(data){
+	kekbot.say("!===DOWNBOATS===!");
+	var list = API.getUsers();
+	for (user in list){
+		if(list[user].vote == -1){
+			kekbot.say(list[user].username);
+		}
+	}
+	kekbot.say("!===END LIST===!");
 }
 API.on(API.CHAT, kekbot.handleCommand);
 kekbot.say("["+kekbot.name+"]: UPDATED.");
