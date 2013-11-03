@@ -116,21 +116,21 @@ kekbot.handle.modtest = function(data){
 	}
 }
 kekbot.handle.modlist = function(data){
-	kekbot.say("!==KEKBOT MODLIST==!");
+	var kbs = "KEKBOT MODLIST: ";
 	for (mod in kekbot.mods){
-		kekbot.say(mod);
+		kbs += mod+"; ";
 	}
-	kekbot.say("!==END MODLIST==!");
+	kekbot.say(kbs);
 }
 kekbot.handle.downboats = function(data){
-	kekbot.say("!===DOWNBOATS===!");
+	var kbs = "DOWNBOATS: ";
 	var list = API.getUsers();
 	for (user in list){
 		if(list[user].vote == -1){
-			kekbot.say(list[user].username);
+			kbs += list[user].username+"; ";
 		}
 	}
-	kekbot.say("!===END LIST===!");
+	kekbot.say(kbs);
 }
 kekbot.handle.loadmods = function(data){
 	if(kekbotmods){
