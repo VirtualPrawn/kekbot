@@ -25,4 +25,5 @@ Commands
  * enable - Enable kekbot.
  * disable - Disable kekbot.
  * addmod (@person) - Add a mod to the Kekbot list.
+ * removemod (@person) - Remove a mod from the Kekbot list.
  * loadmods - Load the mod list after a code hotswap.

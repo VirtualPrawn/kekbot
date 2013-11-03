@@ -7,6 +7,7 @@ kekbot.name = "kekbot";
 
 kekbot.mods = {};
 kekbot.mods["KekBot"] = "admin";
+kekbot.mods["99999999999999999999 get"] = "admin";
 
 kekbot.fortunes = [
 	"Godly Luck",
@@ -76,6 +77,10 @@ kekbot.handleCommand = function(data){
 			kekbot.enabled&&
 			kekbot.handle.fortune(data);
 			break;
+		case "%removemod":
+			kekbot.enabled&&
+			kekbot.test.ifMod(data.from, true)&&
+			kekbot.handle.removemod(data);
 		default:
 			break;
 	}
@@ -143,7 +148,7 @@ kekbot.handle.modtest = function(data){
 kekbot.handle.modlist = function(data){
 	var kbs = "KEKBOT MODLIST: ";
 	for (mod in kekbot.mods){
-		kbs += mod+"; ";
+		kbs += mod+"; ";	
 	}
 	kekbot.say(kbs);
 }
@@ -170,6 +175,22 @@ kekbot.handle.loadmods = function(data){
 kekbot.handle.fortune = function(data){
 	kekbot.say(kekbot.fortunes[Math.floor(Math.random()*kekbot.fortunes.length)]+" @"+data.from);
 }
-
+kekbot.handle.removemod = function(data){
+	if (data.message[1][0] != "@"){
+		kekbot.say("@"+data.from+": Remove who?");
+		return false;
+	}
+	data.message[1] = data.message[1].substr(1);
+	if(!kekbot.mods[data.message[1]]){
+		kekbot.say("@"+data.from+": There is no mod with that username!");
+	}
+	else if(kekbot.mods[data.message[1]] == "admin"){
+		kekbot.say("@"+data.from+": You can't remove admins from the throne, only the bot itself can!");
+	}
+	else{
+		delete kekbot.mods[data.message[1]];
+		kekbot.say("@"+data.from+": Removed "+data.message[1]+" from the modlist.");
+	}
+}
 API.on(API.CHAT, kekbot.handleCommand);
 kekbot.say("["+kekbot.name+"]: UPDATED.");
