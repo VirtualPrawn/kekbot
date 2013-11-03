@@ -1,14 +1,11 @@
+API.off(API.CHAT, kekbot.handleCommand);
 var kekbot = {};
+
 kekbot.enabled = false;
 kekbot.name = "kekbot";
 
 kekbot.mods = {};
 kekbot.mods["KekBot"] = "admin";
-
-kekbot.init = function(){
-	API.off(API.CHAT, kekbot.handleCommand);
-	API.on(API.CHAT, kekbot.handleCommand);
-}
 
 kekbot.handleCommand = function(data){
 	if (data.type != "message"){
@@ -87,4 +84,4 @@ kekbot.handle.addmod = function(data){
 	kekbot.mods[data.message[1]] = true;
 	kekbot.say("@"+data.from+": Added "+data.message[1]+" to the modlist.");
 }
-kekbot.init();
+API.on(API.CHAT, kekbot.handleCommand);
