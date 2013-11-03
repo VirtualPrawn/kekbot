@@ -14,7 +14,16 @@ kekbot.handleCommand = function(data){
 	if (data.type != "message"){
 		return false;
 	}
-	if (data.message == "%roll"){
-		kekbot.say("Roll: "+Math.floor(Math.random()*999999)+" @"+data.from);
+
+	switch(data.message){
+		case "%roll":
+			kekbot.handle.roll(data);
+			break;
+		default:
+			break;
 	}
+}
+kekbot.handle = {};
+kekbot.handle.roll = function(data){
+	kekbot.say("Roll: "+Math.floor(Math.random()*999999)+" @"+data.from);
 }
