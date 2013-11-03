@@ -14,6 +14,7 @@ Commands
  * roll - Roll a random number. Goes from 0 to 999999.
  * fortune - Roll a random fortune.
  * modtest - Test to see if you're privileged.
+ * coinflip - Flips a coin. Outcome is either heads or tails.
 
 **Mods**: People in the modlist can do these commands.
 

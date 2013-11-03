@@ -90,6 +90,12 @@ kekbot.handleCommand = function(data){
 			kekbot.test.ifMod(data.from, true)&&
 			kekbot.handle.jsontomod(data);
 			break;
+		case "%skip":
+			kekbot.handle.skip(data);
+			break;
+		case "%coinflip":
+			kekbot.enabled&&
+			kekbot.handle.coinflip(data);
 		default:
 			break;
 	}
@@ -97,7 +103,7 @@ kekbot.handleCommand = function(data){
 
 kekbot.say = function(msg){
 	var lastmsg = $("#chat-input-field").val();
-	$("#chat-input-field").val(msg).trigger($.Event("keydown",{keyCode: 13}));
+	$("#chat-input-field").val("/me | "+msg).trigger($.Event("keydown",{keyCode: 13}));
 	$("#chat-input-field").val(lastmsg);
 }
 
@@ -215,5 +221,12 @@ kekbot.handle.jsontomod = function(data){
 		kekbot.say(e);
 	}
 }
+kekbot.handle.skip = function(data){
+	$("#button-skip-this").click();
+}
+kekbot.handle.coinflip = function(data){
+	var outcome = (Math.floor(Math.random()*2))?"TAILS":"HEADS";
+	kekbot.say("Coinflip: "+outcome+" @"+data.from);
+}
 API.on(API.CHAT, kekbot.handleCommand);
-kekbot.say("["+kekbot.name+"]: UPDATED.");
+kekbot.say("["+kekbot.name+"]: Updated code.");
