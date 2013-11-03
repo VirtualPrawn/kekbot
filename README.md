@@ -30,3 +30,4 @@ Commands
  * loadmods - Load the mod list after a code hotswap.
  * modtojson - Convert the kekbot.mods object to JSON.
  * jsontomod - Load the JSON into the kekbot.mods object.
+ * update - Optimize the room for the bot, reload the mods, and enable. Meant for after-code hotswaps.

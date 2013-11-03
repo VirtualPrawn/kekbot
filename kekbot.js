@@ -3,12 +3,14 @@ try{kekbotmods = JSON.parse(JSON.stringify(kekbot.mods));}catch(e){}
 var kekbot = {};
 
 kekbot.enabled = false;
-kekbot.name = "kekbot";
+kekbot.name = "KB";
 
+//Bot mods.
 kekbot.mods = {};
 kekbot.mods["KekBot"] = "admin";
 kekbot.mods["99999999999999999999 get"] = "admin";
 
+//Bot fortunes.
 kekbot.fortunes = [
 	"Godly Luck",
 	"Good Luck",
@@ -30,7 +32,33 @@ kekbot.fortunes = [
 	"Ebin Luck"
 ];
 
+kekbot.say = function(msg){
+	var lastmsg = $("#chat-input-field").val();
+	$("#chat-input-field").val("/me | "+msg).trigger($.Event("keydown",{keyCode: 13}));
+	$("#chat-input-field").val(lastmsg);
+}
+kekbot.say_raw = function(msg){
+	$("#chat-input-field").val(msg).trigger($.Event("keydown",{keyCode: 13}));
+}
+
+//Bot tests.
+kekbot.test = {};
+kekbot.test.ifMod = function(who, admin){
+	if (admin && kekbot.mods[who] == "admin"){
+			return true;
+	}
+	else if(!admin && kekbot.mods[who]){
+			return true;
+	}
+	else{
+		return false;	
+	}
+	
+}
+
+//Bot oncommand handler.
 kekbot.handleCommand = function(data){
+	kekbot.say_raw("/clear");
 	if (data.type != "message"){
 		return false;
 	}
@@ -52,6 +80,9 @@ kekbot.handleCommand = function(data){
 			kekbot.handle.disable(data);
 			break;
 		case "%roll":
+		case "%roII":
+		case "%roIl":
+		case "%rolI":
 			kekbot.enabled&&
 			kekbot.handle.roll(data);
 			break;
@@ -94,33 +125,19 @@ kekbot.handleCommand = function(data){
 			kekbot.handle.skip(data);
 			break;
 		case "%coinflip":
+		case "%coinfIip":
 			kekbot.enabled&&
 			kekbot.handle.coinflip(data);
+			break;
+		case "%update":
+			kekbot.test.ifMod(data.from, true)&&
+			kekbot.handle.update(data);
 		default:
 			break;
 	}
 }
 
-kekbot.say = function(msg){
-	var lastmsg = $("#chat-input-field").val();
-	$("#chat-input-field").val("/me | "+msg).trigger($.Event("keydown",{keyCode: 13}));
-	$("#chat-input-field").val(lastmsg);
-}
-
-kekbot.test = {};
-kekbot.test.ifMod = function(who, admin){
-	if (admin && kekbot.mods[who] == "admin"){
-			return true;
-	}
-	else if(!admin && kekbot.mods[who]){
-			return true;
-	}
-	else{
-		return false;	
-	}
-	
-}
-
+//Bot handlers.
 kekbot.handle = {};
 kekbot.handle.enable = function(){
 	if(!kekbot.enabled){
@@ -161,7 +178,7 @@ kekbot.handle.modtest = function(data){
 	}
 }
 kekbot.handle.modlist = function(data){
-	var kbs = "KEKBOT MODLIST: ";
+	var kbs = "MODLIST: ";
 	for (mod in kekbot.mods){
 		kbs += mod+"; ";	
 	}
@@ -181,10 +198,10 @@ kekbot.handle.loadmods = function(data){
 	if(kekbotmods){
 		kekbot.mods = kekbotmods;
 		kekbotmods = null;
-		kekbot.say("["+kekbot.name+"]: Loaded mods.");
+		kekbot.say("["+kekbot.name+"] Loaded mods.");
 	}
 	else{
-		kekbot.say("["+kekbot.name+"]: No mods to load!");
+		kekbot.say("["+kekbot.name+"] No mods to load!");
 	}
 }
 kekbot.handle.fortune = function(data){
@@ -228,5 +245,23 @@ kekbot.handle.coinflip = function(data){
 	var outcome = (Math.floor(Math.random()*2))?"TAILS":"HEADS";
 	kekbot.say("Coinflip: "+outcome+" @"+data.from);
 }
+kekbot.handle.update = function(data){
+	kekbot.say_raw("/clear");
+	kekbot.say_raw("/stream off");
+	kekbot.say_raw("/cap 1");
+	$("#playback-container").hide();
+	$("#chat-messages").hide();
+	$("#audience").hide();
+	$("#booth-canvas").hide();
+	$("#dj-canvas").hide();
+	kekbot.say("Optimized.");
+	kekbot.handle.loadmods();
+	kekbot.handle.enable();
+}
+//Bot users.
+kekbot.users = {};
+
+
+//Load the bot.
 API.on(API.CHAT, kekbot.handleCommand);
 kekbot.say("["+kekbot.name+"]: Updated code.");
