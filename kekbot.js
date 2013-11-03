@@ -1,4 +1,4 @@
-API.off(API.CHAT, kekbot.handleCommand);
+try{API.off(API.CHAT, kekbot.handleCommand);}catch(e){}
 var kekbot = {};
 
 kekbot.enabled = false;
