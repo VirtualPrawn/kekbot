@@ -17,6 +17,8 @@ Commands
  * coinflip - Flips a coin. Outcome is either heads or tails.
  * skip - Skips the song it is playing
  * nextup - Says what song Kekbot will play next.
+ * help - Redirects the user to this repo page.
+ * version - Tells version.
 
 Also, it now listens for these (case-sensitive) strings:
 

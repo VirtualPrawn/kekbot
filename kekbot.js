@@ -4,6 +4,7 @@ var kekbot = {};
 
 kekbot.enabled = false;
 kekbot.name = "KB";
+kekbot.version = "1.8";
 
 //Bot mods.
 kekbot.mods = {};
@@ -166,6 +167,13 @@ kekbot.handleCommand = function(data){
 			kekbot.test.ifMod(data.from, true)&&
 			kekbot.handle.spam(data);
 			break;
+		case "%help":
+			kekbot.enabled&&
+			kekbot.handle.help(data);
+			break;
+		case "%version":
+			kekbot.enabled&&
+			kekbot.handle.version(data);
 		default:
 			kekbot.readmsg(data);
 			break;
@@ -382,6 +390,12 @@ kekbot.handle.spam = function(data){
 		setTimeout(runspam, time);
 	}
 	runspam();
+}
+kekbot.handle.help = function(data){
+	kekbot.say("@"+data.from+": See https://github.com/Strategetical/kekbot");
+}
+kekbot.handle.version = function(data){
+	kekbot.say("@"+data.from+": KekBot v"+kekbot.version+". Created by Strategetical (https://github.com/Strategetical/)");
 }
 
 //Bot users.
