@@ -80,9 +80,6 @@ kekbot.handleCommand = function(data){
 			kekbot.handle.disable(data);
 			break;
 		case "%roll":
-		case "%roII":
-		case "%roIl":
-		case "%rolI":
 			kekbot.enabled&&
 			kekbot.handle.roll(data);
 			break;
@@ -101,7 +98,7 @@ kekbot.handleCommand = function(data){
 			kekbot.handle.modlist(data);
 			break;
 		case "%downboats":
-			kekbot.test.ifMod(data.from)&&
+			kekbot.test.ifMod(data.from, true)&&
 			kekbot.handle.downboats(data);
 			break;
 		case "%fortune":
@@ -125,7 +122,6 @@ kekbot.handleCommand = function(data){
 			kekbot.handle.skip(data);
 			break;
 		case "%coinflip":
-		case "%coinfIip":
 			kekbot.enabled&&
 			kekbot.handle.coinflip(data);
 			break;
@@ -146,7 +142,7 @@ kekbot.handleCommand = function(data){
 			kekbot.test.ifMod(data.from)&&
 			kekbot.handle.djjoin(data);
 			break;
-		case "%toggledj":
+		case "%djleave":
 			kekbot.enabled&&
 			kekbot.test.ifMod(data.from)&&
 			kekbot.handle.djleave(data);
@@ -161,8 +157,30 @@ kekbot.handleCommand = function(data){
 			kekbot.test.ifMod(data.from)&&
 			kekbot.handle.chooseplaylist(data);
 			break;
-		default:
+		case "%nextup":
+			kekbot.enabled&&
+			kekbot.handle.nextup(data);
 			break;
+		case "%spam":
+			kekbot.enabled&&
+			kekbot.test.ifMod(data.from, true)&&
+			kekbot.handle.spam(data);
+			break;
+		default:
+			kekbot.readmsg(data);
+			break;
+	}
+}
+
+kekbot.readmsg = function(data){
+	data.message = data.message.join(" ");
+	if (data.message == "Does she love me?"){
+		kekbot.enabled&&
+		kekbot.say_raw("@"+data.from+": Yes.");		
+	}
+	else if (data.message == "Does he love me?"){
+		kekbot.enabled&&
+		kekbot.say_raw("@"+data.from+": ew r u gay or something");		
 	}
 }
 
@@ -214,13 +232,14 @@ kekbot.handle.modlist = function(data){
 	kekbot.say(kbs);
 }
 kekbot.handle.downboats = function(data){
-	var kbs = "DOWNBOATS: ";
+	/*var kbs = "DOWNBOATS: ";
 	var list = API.getUsers();
 	for (user in list){
 		if(list[user].vote == -1){
 			kbs += list[user].username+"; ";
 		}
-	}
+	}*/
+	var kbs = "DOWNBOATS: ur mom";
 	kekbot.say(kbs);
 }
 kekbot.handle.loadmods = function(data){
@@ -343,6 +362,28 @@ kekbot.handle.chooseplaylist = function(data){
 		$("#media-overlay-header .overlay-close-button").click();
 	}, 2000);
 }
+kekbot.handle.nextup = function(data){
+	kekbot.say("Next up: "+$("#up-next").text());
+}
+kekbot.handle.spam = function(data){
+	var arr = data.message[1].split(" ");
+	var time = parseInt(arr[0]);
+	var amt = parseInt(arr[1]);
+	arr.shift();
+	arr.shift();
+	var msg = arr.join(" ");
+	var amtspammed = 0;
+	function runspam(){
+		if (amtspammed >= amt){
+			return false;
+		}
+		kekbot.say_raw(msg);
+		amtspammed++;
+		setTimeout(runspam, time);
+	}
+	runspam();
+}
+
 //Bot users.
 kekbot.users = {};
 

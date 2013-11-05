@@ -15,10 +15,16 @@ Commands
  * fortune - Roll a random fortune.
  * modtest - Test to see if you're privileged.
  * coinflip - Flips a coin. Outcome is either heads or tails.
+ * skip - Skips the song it is playing
+ * nextup - Says what song Kekbot will play next.
+
+Also, it now listens for these (case-sensitive) strings:
+
+ * "Does she love me?" - Always returns "Yes."
+ * "Does he love me?" - Always returns "ew r u gay or something"
 
 **Mods**: People in the modlist can do these commands.
 
- * downboats - List all the current video downvotes.
  * modlist - List all the Kekbot moderators.
  * listplaylists - List all the Kekbot playlists. Starts counting from 0.
  * chooseplaylist (number) - Choose a specific Kekbot playlist. Starts counting from 0.
@@ -35,3 +41,8 @@ Commands
  * modtojson - Convert the kekbot.mods object to JSON.
  * jsontomod - Load the JSON into the kekbot.mods object.
  * update - Optimize the room for the bot, reload the mods, and enable. Meant for after-code hotswaps.
+ * downboats - List all the current video downvotes. (moved up to admin privileges as requested per Captain Kek)
+ * upboat - Forces the bot to vote up on the current playing video
+ * downboat - Forces the bot to vote down on the current playing video.
+ * spam (interval) (amount) (text) - Spams a specified message X amount of time, with Y delay between message.
+ 
