@@ -20,6 +20,10 @@ Commands
 
  * downboats - List all the current video downvotes.
  * modlist - List all the Kekbot moderators.
+ * listplaylists - List all the Kekbot playlists. Starts counting from 0.
+ * chooseplaylist (number) - Choose a specific Kekbot playlist. Starts counting from 0.
+ * djjoin - Make Kekbot join the DJ list.
+ * djleave - Make Kekbot leave the DJ list.
 
 **Admins**: Only the Kekbot admins can do these commands.
 

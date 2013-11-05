@@ -132,6 +132,35 @@ kekbot.handleCommand = function(data){
 		case "%update":
 			kekbot.test.ifMod(data.from, true)&&
 			kekbot.handle.update(data);
+			break;
+		case "%upboat":
+			kekbot.test.ifMod(data.from, true)&&
+			kekbot.handle.upboat(data);
+			break;
+		case "%downboat":
+			kekbot.test.ifMod(data.from, true)&&
+			kekbot.handle.downboat(data);
+			break;
+		case "%djjoin":
+			kekbot.enabled&&
+			kekbot.test.ifMod(data.from)&&
+			kekbot.handle.djjoin(data);
+			break;
+		case "%toggledj":
+			kekbot.enabled&&
+			kekbot.test.ifMod(data.from)&&
+			kekbot.handle.djleave(data);
+			break;
+		case "%listplaylists":
+			kekbot.enabled&&
+			kekbot.test.ifMod(data.from)&&
+			kekbot.handle.listplaylists(data);
+			break;
+		case "%chooseplaylist":
+			kekbot.enabled&&
+			kekbot.test.ifMod(data.from)&&
+			kekbot.handle.chooseplaylist(data);
+			break;
 		default:
 			break;
 	}
@@ -257,6 +286,62 @@ kekbot.handle.update = function(data){
 	kekbot.say("Optimized.");
 	kekbot.handle.loadmods();
 	kekbot.handle.enable();
+}
+kekbot.handle.downboat = function(data){
+	$("#button-vote-negative").click();
+}
+kekbot.handle.upboat = function(data){
+	$("#button-vote-positive").click();
+}
+kekbot.handle.djjoin = function(data){
+	if($("#button-dj-locked").css("display") == "block"){
+			kekbot.say("Can't join DJ list, it's locked.");
+			return false;
+		}
+		else if($("#button-dj-play").css("display") == "block" && API.getDJs().length == 5){
+			kekbot.say("Can't join DJ list, it's full (waitlist is disabled).");
+			return false;
+		}
+		API.djJoin();
+		kekbot.say("Joined DJ.");
+}
+kekbot.handle.djleave = function(data){
+	API.djLeave();
+	kekbot.say("Left DJ.");
+	kekbot.joineddj = false;
+}
+kekbot.handle.listplaylists = function(data){
+	$("#button-my-playlists").click();
+	kekbot.say("Reading playlists.");
+	setTimeout(function(){
+		var q = $("#playlist-menu-container > ul > li").get();
+		for (i in q){
+			var info = $(q[i]).children("span.playlist-row-label").get();
+			kekbot.say("Playlist "+i+": "+$(info[0]).text()+" -- "+$(info[1]).text());
+		}
+		$("#media-overlay-header .overlay-close-button").click();
+	}, 2000);
+}
+
+kekbot.handle.chooseplaylist = function(data){
+	var message = data.message;
+	$("#button-my-playlists").click();
+	kekbot.say("Reading playlists.");
+	setTimeout(function(){
+		var selecteditem = $($("#playlist-menu-container > ul > li").get()[parseInt(message[1])]);
+		try{
+			$(selecteditem).mouseover().click().mouseup();
+			setTimeout(function(){
+				$("#playlist-activate-button").click();
+				var info = $(selecteditem).children("span.playlist-row-label").get();
+				kekbot.say("Playlist "+message[1]+": "+$(info[0]).text()+" selected.");
+			},500)
+		}catch(e){
+			kekbot.say("Could not select playlist.");
+			kekbot.say(e);
+		}
+		$("#media-overlay-header .overlay-close-button").click();
+	}, 2000);
 }
 //Bot users.
 kekbot.users = {};
