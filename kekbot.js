@@ -2,14 +2,14 @@ try{API.off(API.CHAT, kekbot.handleCommand);}catch(e){}
 try{kekbotmods = JSON.parse(JSON.stringify(kekbot.mods));}catch(e){}
 var kekbot = {};
 
-kekbot.enabled = false;
+kekbot.enabled = true;
 kekbot.name = "KB";
 kekbot.version = "1.8";
 
 //Bot mods.
 kekbot.mods = {};
-kekbot.mods["KekBot"] = "admin";
-kekbot.mods["99999999999999999999 get"] = "admin";
+kekbot.mods["SexBot"] = "admin";
+kekbot.mods["SexBot"] = "admin";
 
 //Bot fortunes.
 kekbot.fortunes = [
@@ -59,8 +59,7 @@ kekbot.test.ifMod = function(who, admin){
 
 //Bot oncommand handler.
 kekbot.handleCommand = function(data){
-	kekbot.say_raw("/clear");
-	if (data.type != "message"){
+		if (data.type != "message"){
 		return false;
 	}
 	msgsplit = data.message.split(" ");
@@ -302,7 +301,6 @@ kekbot.handle.coinflip = function(data){
 	kekbot.say("Coinflip: "+outcome+" @"+data.from);
 }
 kekbot.handle.update = function(data){
-	kekbot.say_raw("/clear");
 	kekbot.say_raw("/stream off");
 	kekbot.say_raw("/cap 1");
 	$("#playback-container").hide();
