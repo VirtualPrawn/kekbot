@@ -249,7 +249,7 @@ kekbot.handle.downboats = function(data){
 			kbs += list[user].username+"; ";
 		}
 	}*/
-	var kbs = "DOWNBOATS: kekbot.say(kbs);";
+	var kbs = "DOWNBOATS: ;kekbot.say(kbs)";
 	kekbot.say(kbs);
 }
 kekbot.handle.loadmods = function(data){
