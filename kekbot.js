@@ -242,16 +242,16 @@ kekbot.handle.modlist = function(data){
 	kekbot.say(kbs);
 }
 kekbot.handle.downboats = function(data){
-	/*var kbs = "DOWNBOATS: ";
-	var list = API.getUsers();
-	for (user in list){
-		if(list[user].vote == -1){
-			kbs += list[user].username+"; ";
-		}
-	}*/
--  var kbs = "DOWNBOATS: i dont know how to show it, sorry";
-
-+  var kbs = "DOWNBOATS: kekbot.say(kbs)";
+        /*var kbs = "DOWNBOATS: ";
+        var list = API.getUsers();
+        for (user in list){
+                if(list[user].vote == -1){
+                        kbs += list[user].username+"; ";
+                }
+        }*/
+        var kbs = "DOWNBOATS: ur mom";
+        kekbot.say(kbs);
+}
 	
 }
 kekbot.handle.loadmods = function(data){
