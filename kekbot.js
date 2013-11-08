@@ -13,8 +13,8 @@ kekbot.mods["SexBot"] = "admin";
 
 //Bot fortunes.
 kekbot.fortunes = [
-	"Godly Luck",
-	"Good Luck",
+	"Godly Luck feggit",
+	"Good Luckfeggit",
 	"Bad Luck",
 	"Future Hazy, Try Again",
 	"You Will Never Fall In Love",
@@ -30,7 +30,11 @@ kekbot.fortunes = [
 	"You Will Get Dubs",
 	"Wow Such Luck",
 	"Don't Bet On It",
-	"Ebin Luck"
+	"Ebin Luck",
+	"You Will Kill urself",
+	"sperm will be the death of you",
+	"chris hanson will catch you",
+	"unfortunatly... you die"
 ];
 
 kekbot.say = function(msg){
