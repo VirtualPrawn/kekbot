@@ -249,8 +249,9 @@ kekbot.handle.downboats = function(data){
 			kbs += list[user].username+"; ";
 		}
 	}*/
-	var kbs = "DOWNBOATS: i give up";
-	kekbot.say(kbs);
+-  var kbs = "DOWNBOATS: i dont know how to show it, sorry";
+
++  var kbs = "DOWNBOATS: kekbot.say(kbs)";
 	
 }
 kekbot.handle.loadmods = function(data){
