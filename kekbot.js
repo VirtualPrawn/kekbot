@@ -2,14 +2,14 @@ try{API.off(API.CHAT, kekbot.handleCommand);}catch(e){}
 try{kekbotmods = JSON.parse(JSON.stringify(kekbot.mods));}catch(e){}
 var kekbot = {};
 
-kekbot.enabled = false;
+kekbot.enabled = true;
 kekbot.name = "KB";
 kekbot.version = "1.8";
 
 //Bot mods.
 kekbot.mods = {};
-kekbot.mods["KekBot"] = "admin";
-kekbot.mods["99999999999999999999 get"] = "admin";
+kekbot.mods["SexBot"] = "admin";
+kekbot.mods["SexBot"] = "admin";
 
 //Bot fortunes.
 kekbot.fortunes = [
