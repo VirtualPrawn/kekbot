@@ -59,7 +59,6 @@ kekbot.test.ifMod = function(who, admin){
 
 //Bot oncommand handler.
 kekbot.handleCommand = function(data){
-	kekbot.say_raw("/clear");
 	if (data.type != "message"){
 		return false;
 	}
@@ -302,7 +301,6 @@ kekbot.handle.coinflip = function(data){
 	kekbot.say("Coinflip: "+outcome+" @"+data.from);
 }
 kekbot.handle.update = function(data){
-	kekbot.say_raw("/clear");
 	kekbot.say_raw("/stream off");
 	kekbot.say_raw("/cap 1");
 	$("#playback-container").hide();
