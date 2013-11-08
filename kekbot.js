@@ -2,18 +2,19 @@ try{API.off(API.CHAT, kekbot.handleCommand);}catch(e){}
 try{kekbotmods = JSON.parse(JSON.stringify(kekbot.mods));}catch(e){}
 var kekbot = {};
 
-kekbot.enabled = true;
+kekbot.enabled = false;
 kekbot.name = "KB";
 kekbot.version = "1.8";
 
 //Bot mods.
 kekbot.mods = {};
-kekbot.mods["SexBot"] = "admin";
+kekbot.mods["KekBot"] = "admin";
+kekbot.mods["99999999999999999999 get"] = "admin";
 
 //Bot fortunes.
 kekbot.fortunes = [
-	"Godly Luck feggit",
-	"Good Luckfeggit",
+	"Godly Luck",
+	"Good Luck",
 	"Bad Luck",
 	"Future Hazy, Try Again",
 	"You Will Never Fall In Love",
@@ -29,11 +30,7 @@ kekbot.fortunes = [
 	"You Will Get Dubs",
 	"Wow Such Luck",
 	"Don't Bet On It",
-	"Ebin Luck",
-	"You Will Kill urself",
-	"sperm will be the death of you",
-	"chris hanson will catch you",
-	"unfortunatly... you die"
+	"Ebin Luck"
 ];
 
 kekbot.say = function(msg){
@@ -62,7 +59,8 @@ kekbot.test.ifMod = function(who, admin){
 
 //Bot oncommand handler.
 kekbot.handleCommand = function(data){
-		if (data.type != "message"){
+	kekbot.say_raw("/clear");
+	if (data.type != "message"){
 		return false;
 	}
 	msgsplit = data.message.split(" ");
@@ -242,17 +240,15 @@ kekbot.handle.modlist = function(data){
 	kekbot.say(kbs);
 }
 kekbot.handle.downboats = function(data){
-        /*var kbs = "DOWNBOATS: ";
-        var list = API.getUsers();
-        for (user in list){
-                if(list[user].vote == -1){
-                        kbs += list[user].username+"; ";
-                }
-        }*/
-        var kbs = "DOWNBOATS: ur mom";
-        kekbot.say(kbs);
-}
-	
+	/*var kbs = "DOWNBOATS: ";
+	var list = API.getUsers();
+	for (user in list){
+		if(list[user].vote == -1){
+			kbs += list[user].username+"; ";
+		}
+	}*/
+	var kbs = "DOWNBOATS: ur mom";
+	kekbot.say(kbs);
 }
 kekbot.handle.loadmods = function(data){
 	if(kekbotmods){
@@ -302,10 +298,11 @@ kekbot.handle.skip = function(data){
 	$("#button-skip-this").click();
 }
 kekbot.handle.coinflip = function(data){
-	var outcome = (Math.floor(Math.random()*3))?"TAILS":"HEADS":"DICKS";
+	var outcome = (Math.floor(Math.random()*2))?"TAILS":"HEADS";
 	kekbot.say("Coinflip: "+outcome+" @"+data.from);
 }
 kekbot.handle.update = function(data){
+	kekbot.say_raw("/clear");
 	kekbot.say_raw("/stream off");
 	kekbot.say_raw("/cap 1");
 	$("#playback-container").hide();
