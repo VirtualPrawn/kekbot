@@ -9,7 +9,6 @@ kekbot.version = "1.8";
 //Bot mods.
 kekbot.mods = {};
 kekbot.mods["SexBot"] = "admin";
-kekbot.mods["SexBot"] = "admin";
 
 //Bot fortunes.
 kekbot.fortunes = [
@@ -301,7 +300,7 @@ kekbot.handle.skip = function(data){
 	$("#button-skip-this").click();
 }
 kekbot.handle.coinflip = function(data){
-	var outcome = (Math.floor(Math.random()*2))?"TAILS":"HEADS";
+	var outcome = (Math.floor(Math.random()*3))?"TAILS":"HEADS":"DICKS";
 	kekbot.say("Coinflip: "+outcome+" @"+data.from);
 }
 kekbot.handle.update = function(data){
