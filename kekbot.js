@@ -3,8 +3,8 @@ try{kekbotmods = JSON.parse(JSON.stringify(kekbot.mods));}catch(e){}
 var kekbot = {};
 
 kekbot.enabled = true;
-kekbot.name = "KB";
-kekbot.version = "1.8";
+kekbot.name = "SB";
+kekbot.version = "2.0_SexBotEdition";
 
 //Bot mods.
 kekbot.mods = {};
@@ -432,10 +432,10 @@ kekbot.handle.spam = function(data){
 	runspam();
 }
 kekbot.handle.help = function(data){
-	kekbot.say("@"+data.from+": See https://github.com/Strategetical/kekbot");
+	kekbot.say("@"+data.from+": See https://github.com/VirtualPrawn/kekbot thanks to https://github.com/Strategetical ");
 }
 kekbot.handle.version = function(data){
-	kekbot.say("@"+data.from+": KekBot v"+kekbot.version+". Created by Strategetical (https://github.com/Strategetical/)");
+	kekbot.say("@"+data.from+": KekBot v"+kekbot.version+". Created by VirtualPrawn original by Strategetical (https://github.com/Strategetical/)");
 }
 
 //Bot users.
