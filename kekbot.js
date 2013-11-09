@@ -130,7 +130,8 @@ kekbot.animal = [
         ":hamster:",
         ":dog:",
         ":squirrel:",
-        ":octocat:"
+        ":octocat:",
+        ":smiley_cat:e"
 ];
 
 
