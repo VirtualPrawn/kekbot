@@ -304,6 +304,10 @@ kekbot.readmsg = function(data){
 		kekbot.enabled&&
 		kekbot.say_raw("/me | BAGGER:two::eight::eight:");		
 	}
+	else if (data.message == "bake me a cake"){
+		kekbot.enabled&&
+		kekbot.say_raw("/me | bakes you a :cake:");		
+	}
 	
 }
 
