@@ -59,8 +59,8 @@ Also, it now listens for these (case-sensitive) strings:
 
 Stats
 --------
-%stairs responces = 28 as of 11-8-13
-%animal responces = 63 as of 11-8-13
-%fortune responces = 21 as of 11-8-13
+ * %stairs responces = 28 as of 11-8-13
+ * %animal responces = 63 as of 11-8-13
+ * %fortune responces = 21 as of 11-8-13
 
  
