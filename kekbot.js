@@ -32,6 +32,28 @@ kekbot.stairs = [
 	"TheReem is beating you up the stairs."
 ];
 
+kekbot.fortunes = [
+        "Godly Luck",
+        "Good Luck",
+        "Bad Luck",
+        "Future Hazy, Try Again",
+        "You Will Never Fall In Love",
+        "ｷﾀ(ﾟ∀ﾟ) !!!!",
+        "You Will Meet A Dark Handsome Stranger",
+        "Doge Sais 'wow bad luck'",
+        "No Keks 4 U",
+        "Very Bad Luck",
+        "Super Duper Trooper Luck",
+        "Good News Will Come To You By Mail",
+        "Doge Blesses You",
+        "Froge Blesses You",
+        "You Will Get Dubs",
+        "Wow Such Luck",
+        "Don't Bet On It",
+        "Ebin Luck"
+
+];
+
 
 
 kekbot.say = function(msg){
@@ -105,6 +127,10 @@ kekbot.handleCommand = function(data){
 		case "%stairs":
 			kekbot.enabled&&
 			kekbot.handle.stairs(data);
+			break;
+		case "%fortune":
+			kekbot.enabled&&
+			kekbot.handle.fortune(data);
 			break;
 		case "%removemod":
 			kekbot.enabled&&
@@ -262,6 +288,10 @@ kekbot.handle.loadmods = function(data){
 }
 kekbot.handle.stairs = function(data){
 	kekbot.say(kekbot.stairs[Math.floor(Math.random()*kekbot.stairs.length)]+" @"+data.from);
+}
+
+kekbot.handle.fortune = function(data){
+	kekbot.say(kekbot.fortune[Math.floor(Math.random()*kekbot.fortune.length)]+" @"+data.from);
 }
 
 
