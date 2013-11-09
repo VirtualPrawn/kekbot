@@ -140,6 +140,20 @@ kekbot.animal = [
         ":smiley_cat:e"
 ];
 
+kekbot.llor = [
+	"You're doing it wrong because your a massive FAGGOT"
+
+        
+
+];
+
+kekbot.genitalwarts = [
+	"You should probably stop sleeping with me"
+
+        
+
+];
+
 
 
 kekbot.say = function(msg){
@@ -213,6 +227,14 @@ kekbot.handleCommand = function(data){
 		case "%stairs":
 			kekbot.enabled&&
 			kekbot.handle.stairs(data);
+			break;
+		case "%llor":
+			kekbot.enabled&&
+			kekbot.handle.llor(data);
+			break;
+		case "%genitalwarts":
+			kekbot.enabled&&
+			kekbot.handle.genitalwarts(data);
 			break;
 		case "%fortune":
 			kekbot.enabled&&
@@ -326,14 +348,11 @@ kekbot.readmsg = function(data){
 		kekbot.enabled&&
 		kekbot.say_raw("/me | cool ranch you bitch ");		
 	}
-	else if (data.message == "> "){
-		kekbot.enabled&&
-		kekbot.say_raw("@"+data.from+": Who are you quoting?");		
-	}
 	else if (data.message == ">"){
 		kekbot.enabled&&
 		kekbot.say_raw("@"+data.from+": Who are you quoting?");		
 	}
+	
 	
 }
 
@@ -415,6 +434,14 @@ kekbot.handle.fortune = function(data){
 
 kekbot.handle.animal = function(data){
 	kekbot.say(kekbot.animal[Math.floor(Math.random()*kekbot.animal.length)]+" @"+data.from);
+}
+
+kekbot.handle.llor = function(data){
+	kekbot.say(kekbot.llor[Math.floor(Math.random()*kekbot.llor.length)]+" @"+data.from);
+}
+
+kekbot.handle.genitalwarts = function(data){
+	kekbot.say(kekbot.genitalwarts[Math.floor(Math.random()*kekbot.genitalwarts.length)]+" @"+data.from);
 }
 
 
