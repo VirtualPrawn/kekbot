@@ -129,7 +129,7 @@ kekbot.handleCommand = function(data){
 			break;
 		case "%stairs":
 			kekbot.enabled&&
-			kekbot.handle.fortune(data);
+			kekbot.handle.stairs(data);
 			break;
 		case "%removemod":
 			kekbot.enabled&&
@@ -287,6 +287,9 @@ kekbot.handle.loadmods = function(data){
 }
 kekbot.handle.fortune = function(data){
 	kekbot.say(kekbot.fortunes[Math.floor(Math.random()*kekbot.fortunes.length)]+" @"+data.from);
+}
+kekbot.handle.stairs = stairs(data){
+	kekbot.say(kekbot.stairs[Math.floor(Math.random()*kekbot.stairs.length)]+" @"+data.from);
 }
 kekbot.handle.removemod = function(data){
 	if (data.message[1][0] != "@"){
