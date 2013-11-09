@@ -38,7 +38,9 @@ kekbot.stairs = [
 	"Warned you bout them stairs bro",
 	"You reached the top of these stairs but theres more stairs",
 	"You took a stairlift...you cheater!",
-	"You started from the bottom...And you are still at the bottom"
+	"You started from the bottom...And you are still at the bottom",
+	"you tripped down the stairs and knocked over the table, this is why we can't have nice things",
+	"you were frantically searching for your new chinos when you spotted a fitty and fell down the stairs"
 	
 ];
 
