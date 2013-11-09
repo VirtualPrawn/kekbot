@@ -435,7 +435,7 @@ kekbot.handle.help = function(data){
 	kekbot.say("@"+data.from+": See https://github.com/VirtualPrawn/kekbot thanks to https://github.com/Strategetical ");
 }
 kekbot.handle.version = function(data){
-	kekbot.say("@"+data.from+": KekBot v"+kekbot.version+". Created by VirtualPrawn original by Strategetical (https://github.com/Strategetical/)");
+	kekbot.say("@"+data.from+": SexBot v"+kekbot.version+". Created by VirtualPrawn original by Strategetical (https://github.com/Strategetical/)");
 }
 
 //Bot users.
