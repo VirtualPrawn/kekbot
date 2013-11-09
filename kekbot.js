@@ -220,6 +220,10 @@ kekbot.readmsg = function(data){
 		kekbot.enabled&&
 		kekbot.say_raw("@"+data.from+": You're almost at the top!");		
 	}
+	else if (data.message == "BAGGER 288"){
+		kekbot.enabled&&
+		kekbot.say_raw("/me  BAGGER:two::eight::eight:");		
+	}
 }
 
 //Bot handlers.
