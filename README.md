@@ -56,4 +56,11 @@ Also, it now listens for these (case-sensitive) strings:
  * %upboat - Forces the bot to vote up on the current playing video
  * %downboat - Forces the bot to vote down on the current playing video.
  * %spam (interval) (amount) (text) - Spams a specified message X amount of time, with Y delay between message.
+
+Stats
+--------
+%stairs responces = 28 as of 11-8-13
+%animal responces = 63 as of 11-8-13
+%fortune responces = 21 as of 11-8-13
+
  
