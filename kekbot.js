@@ -52,7 +52,7 @@ kekbot.stairs = [
 	"You reached the top, type %stairs to celebrate",
 	"you fell down to stair 3",
 	"lil wayne pushed you down the stairs",
-	"@TheReem is beating you up the stairs."
+	"TheReem is beating you up the stairs."
 ];
 
 kekbot.say = function(msg){
