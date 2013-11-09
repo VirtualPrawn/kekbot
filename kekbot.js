@@ -33,7 +33,13 @@ kekbot.stairs = [
 	"!SPECIAL! dog down the stairs http://i.imgur.com/7Zfko9C.gif",
 	"You've reached stair 11, nice dubs.",
 	"you are neither up nor down",
-	"you are caught in MC Escher's stairs"
+	"you are caught in MC Escher's stairs",
+	"Only one step to go",
+	"Warned you bout them stairs bro",
+	"You reached the top of these stairs but theres more stairs",
+	"You took a stairlift...you cheater!",
+	"You started from the bottom...And you are still at the bottom"
+	
 ];
 
 kekbot.fortune = [
