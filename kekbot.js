@@ -12,29 +12,6 @@ kekbot.mods["SexBot"] = "admin";
 kekbot.mods["SexBot"] = "admin";
 
 //Bot fortunes.
-kekbot.fortunes = [
-	"Godly Luck",
-	"Good Luck",
-	"Bad Luck",
-	"Future Hazy, Try Again",
-	"You Will Never Fall In Love",
-	"ｷﾀ(ﾟ∀ﾟ) !!!!",
-	"You Will Meet A Dark Handsome Stranger",
-	"Doge Sais 'wow bad luck'",
-	"No Keks 4 U",
-	"Very Bad Luck",
-	"Super Duper Trooper Luck",
-	"Good News Will Come To You By Mail",
-	"Doge Blesses You",
-	"Froge Blesses You",
-	"You Will Get Dubs",
-	"Wow Such Luck",
-	"Don't Bet On It",
-	"Ebin Luck"
-
-];
-
-//Bot stairs.
 kekbot.stairs = [
 	"You will make it to the top of the stairs",
 	"You will stay at the bottom of the stairs",
@@ -54,6 +31,8 @@ kekbot.stairs = [
 	"lil wayne pushed you down the stairs",
 	"TheReem is beating you up the stairs."
 ];
+
+
 
 kekbot.say = function(msg){
 	var lastmsg = $("#chat-input-field").val();
@@ -123,11 +102,7 @@ kekbot.handleCommand = function(data){
 			kekbot.test.ifMod(data.from, true)&&
 			kekbot.handle.downboats(data);
 			break;
-		case "%fortune":
-			kekbot.enabled&&
-			kekbot.handle.fortune(data);
-			break;
-		case "%stairs":
+		case "%stair":
 			kekbot.enabled&&
 			kekbot.handle.stairs(data);
 			break;
@@ -285,14 +260,10 @@ kekbot.handle.loadmods = function(data){
 		kekbot.say("["+kekbot.name+"] No mods to load!");
 	}
 }
-kekbot.handle.fortune = function(data){
-	kekbot.say(kekbot.fortunes[Math.floor(Math.random()*kekbot.fortunes.length)]+" @"+data.from);
-}
-
-}
-kekbot.handle.stairs = stairs(data){
+kekbot.handle.stair = function(data){
 	kekbot.say(kekbot.stairs[Math.floor(Math.random()*kekbot.stairs.length)]+" @"+data.from);
 }
+
 
 kekbot.handle.removemod = function(data){
 	if (data.message[1][0] != "@"){
