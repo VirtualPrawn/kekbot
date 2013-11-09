@@ -222,7 +222,7 @@ kekbot.readmsg = function(data){
 	}
 	else if (data.message == "BAGGER 288"){
 		kekbot.enabled&&
-		kekbot.say_raw("/me  BAGGER:two::eight::eight:");		
+		kekbot.say_raw("/me | BAGGER:two::eight::eight:");		
 	}
 }
 
