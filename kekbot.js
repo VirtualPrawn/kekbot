@@ -54,6 +54,41 @@ kekbot.fortune = [
 
 ];
 
+kekbot.animal = [
+        ":cat:",
+        ":mouse:",
+        ":rabbit:",
+        ":frog:",
+        ":koala:",
+        ":pig:",
+        ":cow:",
+        ":monkey_face:",
+        ":horse:",
+        ":camel:",
+        ":elephant:",
+        ":snake:",
+        ":baby_chick:",
+        ":hatching_chick:",
+        ":penguin:",
+        ":bug:",
+        ":ant:",
+        ":snail:",
+        ":tropical_fish:",
+        ":whale:",
+        ":dolphin:",
+        ":ram:",
+        ":water_buffalo:",
+        ":rabbit2:",
+        ":goat:",
+        ":dog2:",
+        ":mouse2:",
+        ":dragon_face:",
+        ":dragon_face:",
+        ":leopard:",
+        ":poodle:"
+
+];
+
 
 
 kekbot.say = function(msg){
@@ -131,6 +166,10 @@ kekbot.handleCommand = function(data){
 		case "%fortune":
 			kekbot.enabled&&
 			kekbot.handle.fortune(data);
+			break;
+		case "%animal":
+			kekbot.enabled&&
+			kekbot.handle.animal(data);
 			break;
 		case "%removemod":
 			kekbot.enabled&&
@@ -301,6 +340,10 @@ kekbot.handle.stairs = function(data){
 
 kekbot.handle.fortune = function(data){
 	kekbot.say(kekbot.fortune[Math.floor(Math.random()*kekbot.fortune.length)]+" @"+data.from);
+}
+
+kekbot.handle.animal = function(data){
+	kekbot.say(kekbot.animal[Math.floor(Math.random()*kekbot.animal.length)]+" @"+data.from);
 }
 
 
