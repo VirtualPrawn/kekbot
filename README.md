@@ -29,7 +29,7 @@ Also, it now listens for these (case-sensitive) strings:
  * "Does he love me?" - Always returns "ew r u gay or something"
  * "Where am i on the stairs?" - Always returns "You're almost at the top!" (NEW)
  * "BAGGER 288" - Always returns "BAGGER :two::eight::eight:" (NEW)
- * "bake me a cake" - Always returnes "bakes you a :cake: (NEW)
+ * "bake me a cake" - Always returnes "bakes you a :cake:" (NEW)
 
 **Mods**: People in the modlist can do these commands.
 
