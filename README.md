@@ -34,6 +34,7 @@ Also, it now listens for these (case-sensitive) strings:
  * "BAGGER 288" - Always returns "BAGGER :two::eight::eight:" (NEW)
  * "bake me a cake" - Always returnes "bakes you a :cake:" (NEW)
  * "ranch or cool ranch" - Always returns "cool ranch you bitch" (NEW)
+
 **Mods**: People in the modlist can do these commands.
 
  * %modlist - List all the Kekbot moderators.
