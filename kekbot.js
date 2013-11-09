@@ -102,7 +102,7 @@ kekbot.handleCommand = function(data){
 			kekbot.test.ifMod(data.from, true)&&
 			kekbot.handle.downboats(data);
 			break;
-		case "%stair":
+		case "%stairs":
 			kekbot.enabled&&
 			kekbot.handle.stairs(data);
 			break;
@@ -260,7 +260,7 @@ kekbot.handle.loadmods = function(data){
 		kekbot.say("["+kekbot.name+"] No mods to load!");
 	}
 }
-kekbot.handle.stair = function(data){
+kekbot.handle.stairs = function(data){
 	kekbot.say(kekbot.stairs[Math.floor(Math.random()*kekbot.stairs.length)]+" @"+data.from);
 }
 
