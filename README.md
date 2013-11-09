@@ -52,9 +52,9 @@ Also, it now listens for these (case-sensitive) strings:
  * %modtojson - Convert the kekbot.mods object to JSON.
  * %jsontomod - Load the JSON into the kekbot.mods object.
  * %update - Optimize the room for the bot, reload the mods, and enable. Meant for after-code hotswaps.
- * %downboats - List all the current video downvotes. (moved up to admin privileges as requested per Captain Kek)
+ * %downboats - List all the current video downvotes. (will enable once i find out how)
  * %upboat - Forces the bot to vote up on the current playing video
- * %downboat - Forces the bot to vote down on the current playing video.
+ * %downboat - Forces the bot to vote down on the current playing video. 
  * %spam (interval) (amount) (text) - Spams a specified message X amount of time, with Y delay between message.
 
 Stats
