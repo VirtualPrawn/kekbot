@@ -216,6 +216,10 @@ kekbot.readmsg = function(data){
 		kekbot.enabled&&
 		kekbot.say_raw("@"+data.from+": ew r u gay or something");		
 	}
+	else if (data.message == "Where am i on the stairs?"){
+		kekbot.enabled&&
+		kekbot.say_raw("@"+data.from+": You're almost at the top!");		
+	}
 }
 
 //Bot handlers.
