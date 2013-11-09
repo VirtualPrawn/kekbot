@@ -31,9 +31,28 @@ kekbot.fortunes = [
 	"Wow Such Luck",
 	"Don't Bet On It",
 	"Ebin Luck"
-	"You will make it to the top of the stairs"
-	"You will stay at the bottom of the stairs"
-	"You will make it to the 7th stair"
+
+];
+
+//Bot stairs.
+kekbot.stairs = [
+	"You will make it to the top of the stairs",
+	"You will stay at the bottom of the stairs",
+	"You will make it to the 7th stair",
+	"You will make it to the top, but there will be more stairs",
+	"You're at the sixth stair. Can you get the seventh?",
+	"Wrong way! You are going down!",
+	"How did you get to this stair?",
+	"You're at the sixth stair. Can you get the seventh?",
+	"Somebody is stairing at you.",
+	"Good good, keep em steppin",
+	"You were going up the wrong side of the stairs.",
+	"You tripped up to stair 1",
+	"Almost at the top, keep on stepping",
+	"You reached the top, type %stairs to celebrate",
+	"you fell down to stair 3",
+	"lil wayne pushed you down the stairs",
+	"@TheReem is beating you up the stairs."
 ];
 
 kekbot.say = function(msg){
@@ -105,6 +124,10 @@ kekbot.handleCommand = function(data){
 			kekbot.handle.downboats(data);
 			break;
 		case "%fortune":
+			kekbot.enabled&&
+			kekbot.handle.fortune(data);
+			break;
+		case "%stairs":
 			kekbot.enabled&&
 			kekbot.handle.fortune(data);
 			break;
