@@ -224,10 +224,6 @@ kekbot.readmsg = function(data){
 		kekbot.enabled&&
 		kekbot.say_raw("/me | BAGGER:two::eight::eight:");		
 	}
-	else if (data.message == "implying"){
-		kekbot.enabled&&
-		kekbot.say_raw("/me >implying");		
-	}
 	
 }
 
