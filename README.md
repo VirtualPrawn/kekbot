@@ -2,6 +2,9 @@ SexBot
 ======
 Thanks to Strategetical (dont worry bro ive credited you everywhere)
 
+got ideas for the %stairs or %fortune commands? Msg me at plug.dj/kek (@SexBot)
+got an idea for a new command? do the same as above.
+
 A plug.dj/kek bot.
 
 Commands
