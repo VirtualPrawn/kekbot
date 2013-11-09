@@ -318,9 +318,21 @@ kekbot.readmsg = function(data){
 		kekbot.enabled&&
 		kekbot.say_raw("/me | bakes you a :cake:");		
 	}
+	else if (data.message == "BAKE ME A CAKE"){
+		kekbot.enabled&&
+		kekbot.say_raw("/me | BAKES YOU A :cake:");		
+	}
 	else if (data.message == "ranch or cool ranch"){
 		kekbot.enabled&&
 		kekbot.say_raw("/me | cool ranch you bitch ");		
+	}
+	else if (data.message == "> "){
+		kekbot.enabled&&
+		kekbot.say_raw("@"+data.from+": Who are you quoting?");		
+	}
+	else if (data.message == ">"){
+		kekbot.enabled&&
+		kekbot.say_raw("@"+data.from+": Who are you quoting?");		
 	}
 	
 }
