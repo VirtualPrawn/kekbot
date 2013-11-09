@@ -321,10 +321,6 @@ kekbot.readmsg = function(data){
 		kekbot.enabled&&
 		kekbot.say_raw("/me | cool ranch you bitch ");		
 	}
-	else if (data.message == "Love you Aya"){
-		kekbot.enabled&&
-		kekbot.say_raw("/me | #Based Aya");		
-	}
 	
 }
 
