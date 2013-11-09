@@ -317,6 +317,10 @@ kekbot.readmsg = function(data){
 		kekbot.enabled&&
 		kekbot.say_raw("/me | bakes you a :cake:");		
 	}
+	else if (data.message == "ranch or cool ranch"){
+		kekbot.enabled&&
+		kekbot.say_raw("/me | cool ranch you bitch ");		
+	}
 	
 }
 
