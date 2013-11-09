@@ -63,7 +63,12 @@ kekbot.fortune = [
         "You Will Get Dubs",
         "Wow Such Luck",
         "Don't Bet On It",
-        "Ebin Luck"
+        "Ebin Luck",
+        "Outlook good",
+        "Excellent Luck",
+        "Average Luck",
+        "（　´_ゝ`）ﾌｰﾝ "
+        
 
 ];
 
