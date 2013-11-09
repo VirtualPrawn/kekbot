@@ -32,7 +32,7 @@ kekbot.stairs = [
 	"TheReem is beating you up the stairs."
 ];
 
-kekbot.fortunes = [
+kekbot.fortune = [
         "Godly Luck",
         "Good Luck",
         "Bad Luck",
