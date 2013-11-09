@@ -31,6 +31,9 @@ kekbot.fortunes = [
 	"Wow Such Luck",
 	"Don't Bet On It",
 	"Ebin Luck"
+	"You will make it to the top of the stairs"
+	"You will stay at the bottom of the stairs"
+	"You will make it to the 7th stair"
 ];
 
 kekbot.say = function(msg){
