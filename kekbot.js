@@ -289,6 +289,7 @@ kekbot.handle.fortune = function(data){
 	kekbot.say(kekbot.fortunes[Math.floor(Math.random()*kekbot.fortunes.length)]+" @"+data.from);
 }
 
+}
 kekbot.handle.stairs = stairs(data){
 	kekbot.say(kekbot.stairs[Math.floor(Math.random()*kekbot.stairs.length)]+" @"+data.from);
 }
