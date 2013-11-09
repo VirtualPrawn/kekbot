@@ -224,6 +224,10 @@ kekbot.readmsg = function(data){
 		kekbot.enabled&&
 		kekbot.say_raw("/me | BAGGER:two::eight::eight:");		
 	}
+	else if (data.message == "BAGGER 288 BAGGER 288 BAGGER 288 BAGGER 288 BAGGER 288 BAGGER 288 BAGGER 288 BAGGER 288 BAGGER 288 BAGGER 288 BAGGER 288 BAGGER 288 BAGGER 288 BAGGER 288 BAGGER 288 BAGGER 288 BAGGER 288 BAGGER 288 BAGGER 288 BAGGER 288 BAGGER 288 BAGGER 288 BAGGER 288"){
+		kekbot.enabled&&
+		kekbot.say_raw("/me | BAGGER:two::eight::eight: BAGGER:two::eight::eight: BAGGER:two::eight::eight: BAGGER:two::eight::eight:");		
+	}
 }
 
 //Bot handlers.
