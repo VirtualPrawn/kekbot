@@ -11,7 +11,8 @@ Commands
 
 
 **Users**: Anyone can do these commands.
-
+ 
+ * %animal - Roll a random animal (NEW)
  * %stairs - Tells you how close to the top you are. (NEW)
  * %roll - Roll a random number. Goes from 0 to 999999.
  * %fortune - Roll a random fortune.
@@ -28,6 +29,7 @@ Also, it now listens for these (case-sensitive) strings:
  * "Does he love me?" - Always returns "ew r u gay or something"
  * "Where am i on the stairs?" - Always returns "You're almost at the top!" (NEW)
  * "BAGGER 288" - Always returns "BAGGER :two::eight::eight:" (NEW)
+ * "bake me a cake" - Always returnes "bakes you a :cake: (NEW)
 
 **Mods**: People in the modlist can do these commands.
 
