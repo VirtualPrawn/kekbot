@@ -42,7 +42,8 @@ kekbot.stairs = [
 	"you tripped down the stairs and knocked over the table, this is why we can't have nice things",
 	"you were frantically searching for your new chinos when you spotted a fitty and fell down the stairs",
 	"You reached stair tree fiddy and noticed the stairs are actually an 8 story tall crustacean from the paleozoic era",
-	"you know what they say, stairs are always one step ahead of you."
+	"you know what they say, stairs are always one step ahead of you.",
+	"Started from the dick, now you're here"
 	
 ];
 
