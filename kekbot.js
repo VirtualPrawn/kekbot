@@ -348,10 +348,6 @@ kekbot.readmsg = function(data){
 		kekbot.enabled&&
 		kekbot.say_raw("/me | cool ranch you bitch ");		
 	}
-	else if (data.message == "%troll"){
-		kekbot.enabled&&
-		kekbot.say_raw("@"+data.from+":trollface:");		
-	}
 	
 	
 }
