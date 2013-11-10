@@ -9,7 +9,7 @@ kekbot.version = "2.0_SexBotEdition";
 //Bot mods.
 kekbot.mods = {};
 kekbot.mods["SexBot"] = "admin";
-kekbot.mods["SexBot"] = "admin";
+kekbot.mods["SexLob mobile"] = "admin";
 
 //Bot fortunes.
 kekbot.stairs = [
