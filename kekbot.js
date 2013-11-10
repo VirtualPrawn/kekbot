@@ -347,7 +347,7 @@ kekbot.readmsg = function(data){
 	}
 	else if (data.message == "ranch or cool ranch"){
 		kekbot.enabled&&
-		kekbot.say_raw("/me | cool ranch you bitch ");		
+		kekbot.say_raw("/me | cool ranch or get ded ");		
 	}
 	
 	
