@@ -21,9 +21,9 @@ Commands
  * %fortune - Roll a random fortune.
  * %modtest - Test to see if you're privileged.
  * %coinflip - Flips a coin. Outcome is either heads or tails.
- * %skip - Skips the song it is playing
- * %nextup - Says what song Kekbot will play next.
- * %help - Redirects the user to this repo page.
+ * %skip - Skips the song it is playing                         (NOT WORKING WITH NEW UPDATE.... YET)
+ * %nextup - Says what song Kekbot will play next.              (NOT WORKING WITH NEW UPDATE.... YET)
+ * %help - Redirects the user to this repo page. 
  * %version - Tells version.
 
 Also, it now listens for these (case-sensitive) strings:
@@ -41,10 +41,10 @@ Also, it now listens for these (case-sensitive) strings:
 **Mods**: People in the modlist can do these commands.
 
  * %modlist - List all the Kekbot moderators.
- * %listplaylists - List all the Kekbot playlists. Starts counting from 0.
- * %chooseplaylist (number) - Choose a specific Kekbot playlist. Starts counting from 0.
- * %djjoin - Make Kekbot join the DJ list.
- * %djleave - Make Kekbot leave the DJ list.
+ * %listplaylists - List all the Kekbot playlists. Starts counting from 0.               (NOT WORKING WITH NEW UPDATE.... YET)
+ * %chooseplaylist (number) - Choose a specific Kekbot playlist. Starts counting from 0. (NOT WORKING WITH NEW UPDATE.... YET)
+ * %djjoin - Make Kekbot join the DJ list.                                               (NOT WORKING WITH NEW UPDATE.... YET)
+ * %djleave - Make Kekbot leave the DJ list.                                             (NOT WORKING WITH NEW UPDATE.... YET)
 
 **Admins**: Only the Kekbot admins can do these commands.
 
