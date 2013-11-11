@@ -332,7 +332,7 @@ kekbot.readmsg = function(data){
 	}
 	else if (data.message == "does RikkaTakanashi love me?"){
 		kekbot.enabled&&
-		kekbot.say_raw("@"+data.from+": she only loves ·Dark Flame Master·");		
+		kekbot.say_raw("@"+data.from+": she only loves @Tumithak");		
 	}
 	else if (data.message == "Where am i on the stairs?"){
 		kekbot.enabled&&
