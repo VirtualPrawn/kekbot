@@ -32,8 +32,11 @@ Also, it now listens for these (case-sensitive) strings:
  * "Does he love me?" - Always returns "ew r u gay or something"
  * "Where am i on the stairs?" - Always returns "You're almost at the top!" (NEW)
  * "BAGGER 288" - Always returns "BAGGER :two::eight::eight:" (NEW)
- * "bake me a cake" - Always returnes "bakes you a :cake:" (NEW)
- * "ranch or cool ranch" - Always returns "cool ranch you bitch" (NEW)
+ * "bake me a cake" or "BAKE ME A CAKE" - Always returnes "bakes you a :cake:" (NEW)
+ * "ranch or cool ranch" - Always returns "cool ranch or die" (NEW)
+ * "read me a book" - Always returns "reads you a :book:" (NEW)
+ * %genitalwarts = "You should probably stop sleeping with me" (NEW)
+ * %llor = "You're doing it wrong because your a massive FAGGOT" (NEW)
 
 **Mods**: People in the modlist can do these commands.
 
