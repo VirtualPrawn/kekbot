@@ -350,6 +350,10 @@ kekbot.readmsg = function(data){
 		kekbot.enabled&&
 		kekbot.say_raw("/me | BAKES YOU A :cake:");		
 	}
+	else if (data.message == "read me a book"){
+		kekbot.enabled&&
+		kekbot.say_raw("/me | reads you a :book:");		
+	}
 	else if (data.message == "ranch or cool ranch"){
 		kekbot.enabled&&
 		kekbot.say_raw("/me | cool ranch or get ded ");		
