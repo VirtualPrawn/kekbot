@@ -366,7 +366,7 @@ kekbot.readmsg = function(data){
 kekbot.handle = {};
 kekbot.handle.enable = function(){
 	if(!kekbot.enabled){
-		kekbot.say("["+kekbot.name+"] Enabled.");
+		kekbot.say //("["+kekbot.name+"] Enabled.");
 		kekbot.enabled = true;
 	}
 	else{
@@ -375,7 +375,7 @@ kekbot.handle.enable = function(){
 }
 kekbot.handle.disable = function(){
 	if(kekbot.enabled){
-		kekbot.say("["+kekbot.name+"] Disabled.");
+		kekbot.say //("["+kekbot.name+"] Disabled.");
 		kekbot.enabled = false;	
 	}
 	else{
