@@ -196,11 +196,11 @@ kekbot.handleCommand = function(data){
 			kekbot.test.ifMod(data.from, true)&&
 			kekbot.handle.loadmods(data);
 			break;
-		case "%enable":
+		case "/enable":
 			kekbot.test.ifMod(data.from, true)&&
 			kekbot.handle.enable(data);
 			break;
-		case "%disable":
+		case "/disable":
 			kekbot.test.ifMod(data.from, true)&&
 			kekbot.handle.disable(data);
 			break;
