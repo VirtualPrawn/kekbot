@@ -321,7 +321,7 @@ kekbot.handleCommand = function(data){
 }
 
 kekbot.readmsg = function(data){
-	data.message = data.message.join(" ");
+	data.message = data.message.join("");
 	if (data.message == "Does she love me?"){
 		kekbot.enabled&&
 		kekbot.say_raw("@"+data.from+": Yes.");
@@ -329,7 +329,10 @@ kekbot.readmsg = function(data){
 			if (data.from == "child porn star"){
 			kekbot.say("Thank you #based Aya.");
 		
+				if (data.from == "Tabarnak"){
+				kekbot.say("Yes she does. Too bad you aren't a lezzo.");
 				
+				}
 		}
 	}
 	
@@ -382,15 +385,15 @@ kekbot.readmsg = function(data){
 }
 
 //i think the one above doesnt work with names without spaces testing here with data.message = data.message.join(""); *notice no space after .join
-kekbot.readmsg = function(data){
-	data.message = data.message.join("");
-	if (data.from == "Tabarnak"){
-	kekbot.enabled&&
-	kekbot.say("Yes she does. Too bad you aren't a lezzo.");
-	
-	}
-	
-}
+//kekbot.readmsg = function(data){
+//	data.message = data.message.join("");
+//	if (data.from == "Tabarnak"){
+//	kekbot.enabled&&
+//	kekbot.say("Yes she does. Too bad you aren't a lezzo.");
+//	
+//	}
+//	
+//}
 
 
 //Bot handlers.
