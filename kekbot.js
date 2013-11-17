@@ -422,7 +422,7 @@ kekbot.handle.modlist = function(data){
 	kekbot.say(kbs);
 }
 kekbot.handle.downboats = function(data){
-	/*var kbs = "DOWNBOATS: ";
+	*var kbs = "DOWNBOATS: ";
 	var list = API.getUsers();
 	for (user in list){
 		if(list[user].vote == -1){
