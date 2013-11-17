@@ -358,7 +358,7 @@ kekbot.readmsg = function(data){
 		kekbot.enabled&&
 		kekbot.say_raw("/me | cool ranch or get ded ");		
 	}
-	else if (data.message == "jb"){
+	else if (data.message == "Jason Brazil"){
 		kekbot.enabled&&
 		kekbot.say_raw("/me | We'll I live the Beatles, for she reason I'm obsessed with Jason Brazil");		
 	}
