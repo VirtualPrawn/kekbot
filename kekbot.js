@@ -324,7 +324,12 @@ kekbot.readmsg = function(data){
 	data.message = data.message.join(" ");
 	if (data.message == "Does she love me?"){
 		kekbot.enabled&&
-		kekbot.say_raw("@"+data.from+": Yes.");		
+		kekbot.say_raw("@"+data.from+": Yes.");	
+		kekbot.say_raw("@"+data.from+": Yes.");
+		if (data.from == "child porn star"){
+		kekbot.say("Thank you #based Aya.");
+		
+		}
 	}
 	else if (data.message == "Does he love me?"){
 		kekbot.enabled&&
