@@ -329,8 +329,8 @@ kekbot.readmsg = function(data){
 		if (data.from == "child porn star"){
 		kekbot.say("Thank you #based Aya.");
 		
-		}
 	}
+	
 	else if (data.message == "Does he love me?"){
 		kekbot.enabled&&
 		kekbot.say_raw("@"+data.from+": ew r u gay or something");		
