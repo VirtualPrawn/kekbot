@@ -204,10 +204,10 @@ kekbot.handleCommand = function(data){
 			kekbot.test.ifMod(data.from, true)&&
 			kekbot.handle.disable(data);
 			break;
-		case "%roll":
-			kekbot.enabled&&
-			kekbot.handle.roll(data);
-			break;
+	//	case "%roll":
+	//		kekbot.enabled&&
+	//		kekbot.handle.roll(data);
+	//		break;
 		case "%addmod":
 			kekbot.enabled&&
 			kekbot.test.ifMod(data.from, true)&&
@@ -321,7 +321,7 @@ kekbot.handleCommand = function(data){
 }
 
 kekbot.readmsg = function(data){
-	data.message = data.message.join("");
+	data.message = data.message.join(" ");
 	if (data.message == "Does she love me?"){
 		kekbot.enabled&&
 		kekbot.say_raw("@"+data.from+": Yes.");
@@ -329,10 +329,6 @@ kekbot.readmsg = function(data){
 			if (data.from == "child porn star"){
 			kekbot.say("Thank you #based Aya.");
 		
-				if (data.from == "Tabarnak"){
-				kekbot.say("Yes she does. Too bad you aren't a lezzo.");
-				
-				}
 		}
 	}
 	
