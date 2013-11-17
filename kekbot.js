@@ -326,9 +326,10 @@ kekbot.readmsg = function(data){
 		kekbot.enabled&&
 		kekbot.say_raw("@"+data.from+": Yes.");	
 		kekbot.say_raw("@"+data.from+": Yes.");
-		if (data.from == "child porn star"){
+		if (data.from == "child porn star");
 		kekbot.say("Thank you #based Aya.");
 		
+		}
 	}
 	
 	else if (data.message == "Does he love me?"){
