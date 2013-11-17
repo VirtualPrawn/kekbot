@@ -385,6 +385,7 @@ kekbot.readmsg = function(data){
 kekbot.readmsg = function(data){
 	data.message = data.message.join("");
 	if (data.from == "Tabarnak"){
+	kekbot.enabled&&
 	kekbot.say("Yes she does. Too bad you aren't a lezzo.");
 	
 	}
