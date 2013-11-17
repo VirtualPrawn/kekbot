@@ -330,11 +330,15 @@ kekbot.readmsg = function(data){
 		kekbot.enabled&&
 		kekbot.say_raw("@"+data.from+": ew r u gay or something");		
 	}
-	else if (data.message == "does RikkaTakanashi love me?"){
+	else if (data.message == "Does RikkaTakanashi love me?"){
 		kekbot.enabled&&
 		kekbot.say_raw("@"+data.from+": she only loves @Tumithak");		
 	}
-	else if (data.message == "Where am i on the stairs?"){
+	else if (data.message == "Does Sexual_Lobster love me?"){
+		kekbot.enabled&&
+		kekbot.say_raw("@"+data.from+": Of course i do :heart:");		
+	}
+		else if (data.message == "Where am i on the stairs?"){
 		kekbot.enabled&&
 		kekbot.say_raw("@"+data.from+": You're almost at the top!");		
 	}
