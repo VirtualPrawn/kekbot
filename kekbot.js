@@ -362,6 +362,10 @@ kekbot.readmsg = function(data){
 		kekbot.enabled&&
 		kekbot.say_raw("/me | We'll I live the Beatles, for she reason I'm obsessed with Jason Brazil");		
 	}
+	else if (data.message == "How was dinner?"){
+		kekbot.enabled&&
+		kekbot.say_raw("just thinking back to my dinner today, I was yummy, Grated potato, onion and egg, all mixed up and then i put it around smoked salmon and baked it, I know, you dont need to cook smoked salmon, but it tastes even better, I think I've found my new favourite");		
+	}
 	
 	
 }
