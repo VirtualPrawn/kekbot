@@ -332,9 +332,9 @@ kekbot.readmsg = function(data){
 		}
 	}
 	
-	else if (data.from == "Tabarnak"){
-	kekbot.say("Yes she does. Too bad you aren't a lezzo.");
-	}
+//	else if (data.from == "Tabarnak"){
+//	kekbot.say("Yes she does. Too bad you aren't a lezzo.");
+//	}
 	
 	
 	else if (data.message == "Does he love me?"){
