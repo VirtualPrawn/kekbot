@@ -8,7 +8,7 @@ kekbot.version = "2.0_SexBotEdition";
 
 //Bot mods.
 kekbot.mods = {};
-kekbot.mods["@99999999999999999999get "] = "admin";
+kekbot.mods["@99999999999999999999get"] = "admin";
 kekbot.mods["Sexual_Lobster"] = "admin";
 
 //Bot fortunes.
