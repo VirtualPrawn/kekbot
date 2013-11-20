@@ -204,10 +204,10 @@ kekbot.handleCommand = function(data){
 			kekbot.test.ifMod(data.from, true)&&
 			kekbot.handle.disable(data);
 			break;
-	//	case "%roll":
-	//		kekbot.enabled&&
-	//		kekbot.handle.roll(data);
-	//		break;
+		case "%roll":
+			kekbot.enabled&&
+			kekbot.handle.roll(data);
+			break;
 		case "%addmod":
 			kekbot.enabled&&
 			kekbot.test.ifMod(data.from, true)&&
@@ -336,10 +336,6 @@ kekbot.readmsg = function(data){
 //	kekbot.say("Yes she does. Too bad you aren't a lezzo.");
 //	}
 	
-	else if (data.message == " wew "){
-		kekbot.enabled&&
-		kekbot.say_raw("wew");		
-	}
 	else if (data.message == "Does he love me?"){
 		kekbot.enabled&&
 		kekbot.say_raw("@"+data.from+": ew r u gay or something");		
