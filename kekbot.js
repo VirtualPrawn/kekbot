@@ -336,7 +336,10 @@ kekbot.readmsg = function(data){
 //	kekbot.say("Yes she does. Too bad you aren't a lezzo.");
 //	}
 	
-	
+	else if (data.message == " wew "){
+		kekbot.enabled&&
+		kekbot.say_raw("wew");		
+	}
 	else if (data.message == "Does he love me?"){
 		kekbot.enabled&&
 		kekbot.say_raw("@"+data.from+": ew r u gay or something");		
