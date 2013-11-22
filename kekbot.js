@@ -74,6 +74,36 @@ kekbot.fortune = [
 
 ];
 
+kekbot.john = [
+	"John John",
+	"Frank",
+	"Its Gin.............AND PISS",
+        "John John Decides When John John John Johns",
+        "THE HECK?",
+        "Good God Frank Its Good To See You",
+        "Listen, You Look Like You Could Use A Drink",
+        "You Wanna Take A Seat? Would You Like A Drink?",
+        "First Take A Seat",
+        "HHHMMMMMMMMM",
+        "GOOD GOD Frank Its Been A Long Time",
+        "Business or Business?",
+        "Would You Like A Drink?",
+        "A Drink Frank, Ill Get You One At The Bar",
+        "The Russians Are Dumb, Dumber Than Fags",
+        "These Things Take Time, They Take Preperation, They Take Champagne And They Take Something In My Hand",
+        "It's Cold And Hard",
+        "There's Nothing Cold And Hard In My Hand, There's Nothing, Not Even My Dick",
+        "I Need Something In My Hand",
+        "Not My Dick",
+        "Do You Mind Frank?",
+        "",
+        "",
+        
+        
+
+];
+
+
 kekbot.animal = [
         ":cat:",
         ":mouse:",
@@ -229,6 +259,10 @@ kekbot.handleCommand = function(data){
 		case "%stairs":
 			kekbot.enabled&&
 			kekbot.handle.stairs(data);
+			break;
+		case "%john":
+			kekbot.enabled&&
+			kekbot.handle.john(data);
 			break;
 		case "%llor":
 			kekbot.enabled&&
@@ -457,6 +491,11 @@ kekbot.handle.loadmods = function(data){
 kekbot.handle.stairs = function(data){
 	kekbot.say(kekbot.stairs[Math.floor(Math.random()*kekbot.stairs.length)]+" @"+data.from);
 }
+
+kekbot.handle.john = function(data){
+	kekbot.say(kekbot.john[Math.floor(Math.random()*kekbot.john.length)]+" @"+data.from);
+}
+
 
 kekbot.handle.fortune = function(data){
 	kekbot.say(kekbot.fortune[Math.floor(Math.random()*kekbot.fortune.length)]+" @"+data.from);
