@@ -96,10 +96,25 @@ kekbot.john = [
         "I Need Something In My Hand",
         "Not My Dick",
         "Do You Mind Frank?",
-        "",
-        "",
-        
-        
+        "Lets Not Talk Business Till You've Had A Drink",
+        "I Need To Get You A Drink",
+        "Let Me Get You A Bar At The Drink",
+        "You Want Gin?",
+        "Business, Business, Not Until You've Had Your Drink",
+        "It'l Get To You Once I Get It At The Bar",
+        "Ill Mix You A Drink. Gin?",
+        "Hah, Great",
+        "Things Might Be Ok Now But They Might Not Be Okay For Much Longer",
+        "You Know John, You Know Frank Its Not About The Money",
+        "John, Frank",
+        "We're Gonna Make A Drink",
+        "Good Night, SWEET PRINCE",
+        "Taste Your Drink Frank",
+        "Down The Hatch",
+        "TASTE IT",
+        "How's Your Drink? Does It Burn?",
+        "You Know I dont Usually Play Games Unless Im Dealing With A Fool Or Perhaps A Fag But You Might Qualify, As Both, At The Same Time, Together",
+        "I'm John John Who Are You?"
 
 ];
 
