@@ -10,6 +10,8 @@ kekbot.version = "2.0_SexBotEdition";
 kekbot.mods = {};
 kekbot.mods["99999999999999999999get"] = "admin";
 kekbot.mods["Sexual_Lobster"] = "admin";
+kekbot.mods["Rikka-Takanashi"] = "admin";
+kekbot.mods["Tabarnak"] = "admin";
 
 //Bot fortunes.
 kekbot.stairs = [
